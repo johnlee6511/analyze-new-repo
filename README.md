@@ -1,46 +1,46 @@
 # analyze-new-repo
 
-`analyze-new-repo`는 낯선 저장소를 처음 접한 개발자가, 과하지 않은 분량으로 핵심 구조와 판단 포인트를 빠르게 이해할 수 있게 해주는 저장소 분석 스킬입니다.
+`analyze-new-repo` is a repository analysis skill designed to help a developer understand an unfamiliar codebase quickly, without producing an overly long report.
 
-이 스킬은 가벼운 요약문보다 **짧고 읽기 쉬운 분석 보고서**를 목표로 합니다. 단순히 파일을 나열하는 대신, 저장소의 목적, 실행 구조, 핵심 설계 결정, 품질 신호와 리스크를 증거 기반으로 정리하도록 설계되어 있습니다.
+The skill aims to produce a short, readable analysis report rather than a lightweight summary. Instead of listing files mechanically, it is designed to explain the repository's purpose, execution model, defining design decisions, visible quality signals, and practical risks using concrete evidence from the codebase.
 
-## 이 프로젝트가 제공하는 것
+## What This Project Provides
 
-현재 이 저장소는 하나의 스킬을 제공합니다.
+This repository currently provides one skill:
 
-- `analyze-new-repo`: 낯선 repository를 분석해서 다음 내용을 빠르게 파악하도록 돕는 스킬
-  - 이 프로젝트가 실제로 무엇을 하려는지
-  - 어떻게 실행되고 구성되는지
-  - 어떤 설계 결정이 구조를 규정하는지
-  - 어떤 리스크와 미지수가 중요한지
-  - 구조상 어디가 진짜 중심인지
+- `analyze-new-repo`: a skill for analyzing an unfamiliar repository and helping a developer quickly understand
+  - what the project is really trying to do
+  - how it runs and how it is organized
+  - which design decisions define the structure
+  - which risks and unknowns matter most
+  - where the architectural center of gravity really is
 
-## 스킬 출력 성격
+## Intended Output Style
 
-이 스킬은 다음과 같은 결과를 지향합니다.
+This skill is designed to produce:
 
-- 개발자가 한 번에 읽을 수 있는 적당한 분량
-- README 요약이 아니라 판단이 있는 분석
-- 사실과 해석이 함께 들어간 bullet 중심 보고서
-- 저장소 성격에 맞게 유연하게 구성된 섹션
+- a report a developer can read in one pass
+- analysis with judgment, not just README paraphrase
+- bullet-driven output that combines facts and interpretation
+- flexible sections that fit the shape of the repository
 
-즉, 목표는 "처음 repo를 열었을 때 바로 다음 판단을 할 수 있게 해주는 분석 보고서"입니다.
+The goal is to help a developer form the right mental model quickly after opening a new repository.
 
-## 설치 방법
+## Installation
 
-GitHub 저장소에서 직접 설치할 수 있습니다.
+Install directly from GitHub:
 
 ```bash
 npx skills add DaeseungLee/analyze-new-repo
 ```
 
-특정 스킬만 설치:
+Install only this skill:
 
 ```bash
 npx skills add DaeseungLee/analyze-new-repo --skill analyze-new-repo
 ```
 
-특정 에이전트에 설치:
+Install for a specific agent:
 
 ```bash
 npx skills add DaeseungLee/analyze-new-repo -a claude-code
@@ -49,13 +49,13 @@ npx skills add DaeseungLee/analyze-new-repo -a opencode
 npx skills add DaeseungLee/analyze-new-repo -a pi
 ```
 
-또는 전체 GitHub URL을 사용할 수도 있습니다.
+You can also install from the full GitHub URL:
 
 ```bash
-npx skills add https://github.com/DaeseungLee/analyze-new-repo
+npx skills add https://github.com/floopy/analyze-new-repo
 ```
 
-## 저장소 구조
+## Repository Layout
 
 ```text
 skills/
@@ -70,31 +70,29 @@ LICENSE
 README.md
 ```
 
-## 주요 파일
+## Key Files
 
 - `skills/analyze-new-repo/SKILL.md`
-  - 스킬의 본문 정의. 조사 순서, 출력 규칙, 증거 기준, 품질 기준이 들어 있습니다.
+  - The main skill definition. It contains the investigation workflow, output rules, evidence rules, and writing quality bar.
 - `skills/analyze-new-repo/references/checklist.md`
-  - 저장소 분석 시 빠르게 확인할 항목들입니다.
+  - A compact checklist for repository analysis.
 - `skills/analyze-new-repo/references/report-template.md`
-  - 출력 보고서의 기본 구조 가이드입니다.
-- `examples/karpathy-autoresearch.md`
-  - 한 가지 예시 출력입니다. 대표적인 모든 케이스를 대변하진 않지만, 원하는 출력 톤과 밀도를 보여줍니다.
+  - A structure guide for the final report.
 
-## 개발 및 로컬 확인
+## Development and Local Checks
 
-현재 디렉터리에서 발견되는 스킬 목록 확인:
+List skills discovered from the current directory:
 
 ```bash
 npx skills add . --list
 ```
 
-로컬 체크아웃에서 단일 스킬 설치 테스트:
+Test installing this skill from a local checkout:
 
 ```bash
 npx skills add . --skill analyze-new-repo -a claude-code
 ```
 
-## 라이선스
+## License
 
-MIT License. 자세한 내용은 `LICENSE`를 참고하세요.
+MIT License. See `LICENSE` for details.
