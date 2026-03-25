@@ -1,28 +1,28 @@
 # analyze-new-repo
 
-`analyze-new-repo` is a repository analysis skill designed to help a developer understand an unfamiliar codebase quickly, without producing an overly long report.
+`analyze-new-repo` is a repository analysis skill for developers opening an unfamiliar codebase for the first time.
 
-The skill aims to produce a short, readable analysis report rather than a lightweight summary. Instead of listing files mechanically, it is designed to explain the repository's purpose, execution model, defining design decisions, visible quality signals, and practical risks using concrete evidence from the codebase.
+It is designed to produce a short, readable analysis report that helps a developer understand the repository's purpose, execution model, defining design decisions, architectural center of gravity, and practical risks without turning the result into an overly long walkthrough.
 
 ## What This Project Provides
 
 This repository currently provides one skill:
 
-- `analyze-new-repo`: a skill for analyzing an unfamiliar repository and helping a developer quickly understand
-  - what the project is really trying to do
-  - how it runs and how it is organized
-  - which design decisions define the structure
-  - which risks and unknowns matter most
-  - where the architectural center of gravity really is
+- `analyze-new-repo`
+  - explains what the project is really trying to do
+  - explains how it runs and how it is organized
+  - surfaces the design decisions that define the codebase
+  - highlights the most important risks and unknowns
+  - identifies where the repository's real structural weight sits
 
 ## Intended Output Style
 
-This skill is designed to produce:
+The skill is designed to produce:
 
 - a report a developer can read in one pass
 - analysis with judgment, not just README paraphrase
-- bullet-driven output that combines facts and interpretation
-- flexible sections that fit the shape of the repository
+- bullet-driven writing that combines facts and interpretation
+- section structure that adapts to the repository instead of forcing one rigid template
 
 The goal is to help a developer form the right mental model quickly after opening a new repository.
 
@@ -78,6 +78,8 @@ README.md
   - A compact checklist for repository analysis.
 - `skills/analyze-new-repo/references/report-template.md`
   - A structure guide for the final report.
+- `examples/karpathy-autoresearch.md`
+  - A sample output for a small, distinctive repository. It is an example of the intended tone and synthesis level, not a universal template.
 
 ## Development and Local Checks
 
