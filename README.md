@@ -31,28 +31,28 @@ The goal is to help a developer form the right mental model quickly after openin
 Install directly from GitHub:
 
 ```bash
-npx skills add DaeseungLee/analyze-new-repo
+npx skills add johnlee6511/analyze-new-repo
 ```
 
 Install only this skill:
 
 ```bash
-npx skills add DaeseungLee/analyze-new-repo --skill analyze-new-repo
+npx skills add johnlee6511/analyze-new-repo --skill analyze-new-repo
 ```
 
 Install for a specific agent:
 
 ```bash
-npx skills add DaeseungLee/analyze-new-repo -a claude-code
-npx skills add DaeseungLee/analyze-new-repo -a codex
-npx skills add DaeseungLee/analyze-new-repo -a opencode
-npx skills add DaeseungLee/analyze-new-repo -a pi
+npx skills add johnlee6511/analyze-new-repo -a claude-code
+npx skills add johnlee6511/analyze-new-repo -a codex
+npx skills add johnlee6511/analyze-new-repo -a opencode
+npx skills add johnlee6511/analyze-new-repo -a pi
 ```
 
 You can also install from the full GitHub URL:
 
 ```bash
-npx skills add https://github.com/floopy/analyze-new-repo
+npx skills add https://github.com/johnlee6511/analyze-new-repo
 ```
 
 ## Repository Layout
